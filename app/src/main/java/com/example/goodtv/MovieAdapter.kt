@@ -50,7 +50,7 @@ class MovieAdapter (private val movieList: ArrayList<Movie>) : RecyclerView.Adap
         val movieName = view.findViewById<TextView>(R.id.NameTextView)
         val moviePoster = view.findViewById<ImageView>(R.id.PosterView)
         val movieRating = view.findViewById<TextView>(R.id.RatingView)
-        val watched = view.findViewById<TextView>(R.id.Watched)
+
 
         fun bind(index: Int,  movie: Movie) {
             Glide
@@ -59,7 +59,7 @@ class MovieAdapter (private val movieList: ArrayList<Movie>) : RecyclerView.Adap
                 .into(moviePoster)
             movieName.text=movie.Name.toString()
             movieRating.text=movie.Rating.toString()
-            watched.text=movie.Watched.toString()
+
 
         }
 
