@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "376362148290",
+    "project_id": "goodtv-halgas",
+    "storage_bucket": "goodtv-halgas.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:376362148290:android:8480b30a3f3e8b308bf65b",
+        "android_client_info": {
+          "package_name": "com.example.goodtv"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "376362148290-38uv3g761nuvbkd83gtg6pcvjgu6daht.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDG8fMB6YvBOBr7Prx0qZvu74c0E6-5VLA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "376362148290-38uv3g761nuvbkd83gtg6pcvjgu6daht.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

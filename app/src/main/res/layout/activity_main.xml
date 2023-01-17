@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:background="@color/brown">
+
+    <ImageButton
+        android:id="@+id/SearchBtnHome"
+        android:layout_width="168dp"
+        android:layout_height="61dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/imageButton"
+        app:srcCompat="@drawable/ic_baseline_search_24"
+        tools:ignore="SpeakableTextPresentCheck"
+        android:background="@color/light_brown2"/>
+
+    <Button
+        android:id="@+id/WatchedBtn"
+        android:layout_width="333dp"
+        android:layout_height="64dp"
+        android:layout_marginTop="200dp"
+        android:text="@string/Btn1"
+        app:iconTint="#009688"
+        app:layout_constraintBottom_toTopOf="@+id/ToWatchBtn"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/ToWatchBtn"
+        android:layout_width="333dp"
+        android:layout_height="65dp"
+        android:layout_marginTop="25dp"
+        android:text="@string/Btn2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/WatchedBtn" />
+
+    <TextView
+        android:id="@+id/WelcomeText"
+        android:layout_width="304dp"
+        android:layout_height="69dp"
+        android:fontFamily="monospace"
+        android:text="@string/header"
+        android:textAlignment="center"
+        android:textColor="#131313"
+        android:textSize="48sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/WatchedBtn"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.343" />
+
+    <ImageButton
+        android:id="@+id/imageButton"
+        android:layout_width="161dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginBottom="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/SearchBtnHome"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/ic_baseline_home_24"
+        android:background="@color/light_brown2"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
