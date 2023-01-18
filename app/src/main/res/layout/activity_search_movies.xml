@@ -12,24 +12,12 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="50dp"
+        android:layout_marginEnd="30dp"
         android:layout_marginBottom="15dp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/SearchBtnHome"
+        app:layout_constraintEnd_toStartOf="@+id/MoreBtn"
         app:layout_constraintStart_toStartOf="parent"
         app:srcCompat="@android:drawable/btn_star"
-        tools:ignore="SpeakableTextPresentCheck" />
-
-    <ImageButton
-        android:id="@+id/SearchBtnHome"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="35dp"
-        android:layout_marginEnd="50dp"
-        android:layout_marginBottom="15dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/HomeBtnHome"
-        app:srcCompat="@android:drawable/ic_menu_search"
         tools:ignore="SpeakableTextPresentCheck" />
 
     <EditText
@@ -67,5 +55,17 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/SearchEditText"
         tools:listitem="@layout/recyclerviewmovie" />
+
+    <ImageButton
+        android:id="@+id/MoreBtn"
+        android:layout_width="0dp"
+        android:layout_height="52dp"
+        android:layout_marginEnd="50dp"
+        android:layout_marginBottom="12dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.715"
+        app:layout_constraintStart_toEndOf="@+id/HomeBtnHome"
+        app:srcCompat="@drawable/ic_baseline_add_24" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
