@@ -46,11 +46,13 @@ class ToWatchMovies : AppCompatActivity() {
         homeBtn.setOnClickListener {
             val intent = Intent(this, MainActivity::class.java)
             startActivity(intent)
+            finish()
         }
 
         searchBtn.setOnClickListener {
             val intent = Intent(this, SearchMovies::class.java)
             startActivity(intent)
+            finish()
         }
     }
 }

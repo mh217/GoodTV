@@ -19,16 +19,19 @@ class MainActivity : AppCompatActivity() {
         watchedBtn.setOnClickListener {
             val watchedAct =Intent(this, WatchedMovies::class.java)
             startActivity(watchedAct)
+            finish()
         }
 
         toWatchBtn.setOnClickListener {
             val toWatchAct =Intent(this,ToWatchMovies::class.java)
             startActivity(toWatchAct)
+            finish()
         }
 
         searchBtn.setOnClickListener {
             val searchAct =Intent(this, SearchMovies::class.java)
             startActivity(searchAct)
+            finish()
         }
     }
 }
