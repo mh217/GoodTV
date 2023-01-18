@@ -37,13 +37,11 @@ class SearchMovies : AppCompatActivity(){
         homeBtn.setOnClickListener {
             val toWatchAct = Intent(this,MainActivity::class.java)
             startActivity(toWatchAct)
-            finish()
         }
 
         moreBtn.setOnClickListener {
             val searchAct = Intent(this, Detailed::class.java)
             startActivity(searchAct)
-            finish()
         }
 
         db.collection("Movies")
