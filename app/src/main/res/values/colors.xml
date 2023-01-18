@@ -14,4 +14,8 @@
     <color name="brown">#6A6B65</color>
     <color name="light_brown">#A89985</color>
     <color name="light_brown2">#CFC1AB</color>
+    <color name="darkred">#4A2632</color>
+    <color name="orange">#FEB561</color>
+    <color name="purple">#A08986</color>
+    <color name="lightpurple">#EADDCD</color>
 </resources>

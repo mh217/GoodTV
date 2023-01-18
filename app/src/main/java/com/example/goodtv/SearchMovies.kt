@@ -28,7 +28,7 @@ class SearchMovies : AppCompatActivity(){
 
         val movieRecyclerView =findViewById<RecyclerView>(R.id.MovieRecycleView)
         val searchButton = findViewById<ImageButton>(R.id.SearchBtnSearch)
-        val homeBtn = findViewById<ImageButton>(R.id.HomeBtnHome)
+        val homeBtn = findViewById<ImageButton>(R.id.HomeBtnHomee)
         val moreBtn = findViewById<ImageButton>(R.id.MoreBtn)
 
 
@@ -40,7 +40,7 @@ class SearchMovies : AppCompatActivity(){
         }
 
         moreBtn.setOnClickListener {
-            val searchAct = Intent(this, SearchMovies::class.java)
+            val searchAct = Intent(this, Detailed::class.java)
             startActivity(searchAct)
         }
 

@@ -4,7 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Movie_details">
+    tools:context=".Movie_details"
+    android:background="@color/brown">
 
     <ImageView
         android:id="@+id/IMGPoster"
@@ -37,6 +38,9 @@
         android:layout_marginTop="32dp"
         android:layout_marginEnd="10dp"
         android:text="TextView"
+        android:textAlignment="center"
+        android:textSize="16sp"
+        android:textStyle="italic"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.375"
         app:layout_constraintStart_toStartOf="parent"
@@ -74,12 +78,13 @@
 
     <ImageButton
         android:id="@+id/backBtn"
-        android:layout_width="59dp"
-        android:layout_height="58dp"
-        android:layout_marginTop="10dp"
+        android:layout_width="71dp"
+        android:layout_height="54dp"
+        android:layout_marginTop="12dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.045"
+        app:layout_constraintHorizontal_bias="0.044"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="?attr/actionModeCloseDrawable" />
+        app:srcCompat="@drawable/ic_baseline_arrow_back_24" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

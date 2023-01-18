@@ -6,4 +6,17 @@
     android:layout_height="match_parent"
     tools:context=".Detailed">
 
+    <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/fragmentContainerView"
+        android:name="com.example.goodtv.MoreFrag"
+        android:layout_width="405dp"
+        android:layout_height="727dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.488"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.387"
+        tools:layout="@layout/fragment_more" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

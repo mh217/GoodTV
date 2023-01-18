@@ -17,8 +17,8 @@ class ToWatchMovies : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_to_watch_movies)
-        val homeBtn=findViewById<ImageButton>(R.id.HomeBtnHome)
-        val searchBtn =findViewById<ImageButton>(R.id.SearchBtnHome)
+        val homeBtn=findViewById<ImageButton>(R.id.HomeBtnHomet)
+        val searchBtn =findViewById<ImageButton>(R.id.SearchBtnHomet)
 
 
         val movieRecyclerView =findViewById<RecyclerView>(R.id.ToWatchRecyclerView)

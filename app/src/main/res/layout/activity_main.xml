@@ -9,28 +9,28 @@
 
     <ImageButton
         android:id="@+id/SearchBtnHome"
-        android:layout_width="168dp"
-        android:layout_height="61dp"
+        android:layout_width="161dp"
+        android:layout_height="60dp"
         android:layout_marginStart="20dp"
         android:layout_marginEnd="20dp"
         android:layout_marginBottom="20dp"
+        android:background="@color/light_brown2"
+
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/imageButton"
         app:srcCompat="@drawable/ic_baseline_search_24"
-        tools:ignore="SpeakableTextPresentCheck"
-        android:background="@color/light_brown2"/>
+        tools:ignore="SpeakableTextPresentCheck" />
 
     <Button
         android:id="@+id/WatchedBtn"
         android:layout_width="333dp"
         android:layout_height="64dp"
-        android:layout_marginTop="200dp"
+        android:layout_marginTop="250dp"
         android:text="@string/Btn1"
         app:iconTint="#009688"
         app:layout_constraintBottom_toTopOf="@+id/ToWatchBtn"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -38,10 +38,9 @@
         android:id="@+id/ToWatchBtn"
         android:layout_width="333dp"
         android:layout_height="65dp"
-        android:layout_marginTop="25dp"
+        android:layout_marginTop="16dp"
         android:text="@string/Btn2"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/WatchedBtn" />
 
@@ -60,7 +59,7 @@
         app:layout_constraintHorizontal_bias="0.495"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.351" />
+        app:layout_constraintVertical_bias="0.229" />
 
     <ImageButton
         android:id="@+id/imageButton"
@@ -73,5 +72,19 @@
         app:layout_constraintStart_toStartOf="parent"
         app:srcCompat="@drawable/ic_baseline_home_24"
         android:background="@color/light_brown2"/>
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="286dp"
+        android:layout_height="58dp"
+        android:layout_marginTop="120dp"
+        android:fontFamily="monospace"
+        android:text="Tracks movies that you watched and ones that are still waiting for you"
+        android:textAlignment="center"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

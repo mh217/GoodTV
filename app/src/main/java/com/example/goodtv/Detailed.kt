@@ -8,6 +8,12 @@ class Detailed : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_detailed)
 
+        val additional = MoreFrag()
+
+        supportFragmentManager.beginTransaction().apply {
+            replace(R.id.fragmentContainerView,additional)
+            commit()
+        }
 
     }
 }

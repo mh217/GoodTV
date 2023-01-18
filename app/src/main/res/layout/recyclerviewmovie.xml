@@ -29,7 +29,7 @@
         android:layout_marginBottom="15dp"
         android:fontFamily="monospace"
         android:text="TextView"
-        android:textSize="20sp"
+        android:textSize="16sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/RatingView"
         app:layout_constraintStart_toStartOf="parent"

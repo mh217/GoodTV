@@ -45,7 +45,7 @@ class WatchedMovies : AppCompatActivity(){
 
 
         val homeBtn=findViewById<ImageButton>(R.id.HomeBtnHome)
-        val searchBtn = findViewById<ImageButton>(R.id.SearchBtnHome)
+        val searchBtn = findViewById<ImageButton>(R.id.SearchBtnHomee)
         homeBtn.setOnClickListener {
             val intent = Intent(this, MainActivity::class.java)
             startActivity(intent)
