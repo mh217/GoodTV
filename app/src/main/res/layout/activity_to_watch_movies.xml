@@ -7,16 +7,6 @@
     tools:context=".ToWatchMovies"
     android:background="@color/brown">
 
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/ToWatchRecyclerView"
-        android:layout_width="412dp"
-        android:layout_height="624dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.052" />
-
     <ImageButton
         android:id="@+id/HomeBtnHomet"
         android:layout_width="161dp"
@@ -27,8 +17,6 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/SearchBtnHomet"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/ToWatchRecyclerView"
-        app:layout_constraintVertical_bias="0.97"
         app:srcCompat="@drawable/ic_baseline_home_24" />
 
     <ImageButton
@@ -42,9 +30,16 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/HomeBtnHomet"
-        app:layout_constraintTop_toBottomOf="@+id/ToWatchRecyclerView"
-        app:layout_constraintVertical_bias="0.97"
         app:srcCompat="@drawable/ic_baseline_search_24" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/ToWatchRecyclerView"
+        android:layout_width="407dp"
+        android:layout_height="600dp"
+        app:layout_constraintBottom_toTopOf="@+id/HomeBtnHomet"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
