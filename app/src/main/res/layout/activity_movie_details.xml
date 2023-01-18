@@ -32,8 +32,8 @@
 
     <TextView
         android:id="@+id/SynopsisText"
-        android:layout_width="396dp"
-        android:layout_height="315dp"
+        android:layout_width="400dp"
+        android:layout_height="456dp"
         android:layout_marginStart="10dp"
         android:layout_marginTop="32dp"
         android:layout_marginEnd="10dp"
