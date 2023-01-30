@@ -81,7 +81,7 @@ class Comments : Fragment() {
                 .addOnFailureListener {exception ->
                     Log.w("Comments", "Error getting documents.", exception)
                 }
-            
+
         }
 
 
