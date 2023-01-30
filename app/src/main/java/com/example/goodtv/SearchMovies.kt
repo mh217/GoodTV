@@ -40,7 +40,7 @@ class SearchMovies : AppCompatActivity(){
         }
 
         moreBtn.setOnClickListener {
-            val searchAct = Intent(this, Detailed::class.java)
+            val searchAct = Intent(this, CommentHelp::class.java)
             startActivity(searchAct)
         }
 

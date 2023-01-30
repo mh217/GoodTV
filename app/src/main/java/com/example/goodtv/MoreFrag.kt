@@ -36,7 +36,7 @@ class MoreFrag : Fragment() {
         }
 
         back.setOnClickListener {
-            val backTo = Intent(context,SearchMovies::class.java)
+            val backTo = Intent(context,MainActivity::class.java)
             startActivity(backTo)
         }
 

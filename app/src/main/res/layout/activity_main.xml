@@ -18,7 +18,7 @@
 
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/imageButton"
+        app:layout_constraintStart_toEndOf="@+id/MoreBtnInHome"
         app:srcCompat="@drawable/ic_baseline_search_24"
         tools:ignore="SpeakableTextPresentCheck" />
 
@@ -62,7 +62,7 @@
         app:layout_constraintVertical_bias="0.229" />
 
     <ImageButton
-        android:id="@+id/imageButton"
+        android:id="@+id/MoreBtnInHome"
         android:layout_width="161dp"
         android:layout_height="60dp"
         android:layout_marginStart="20dp"
@@ -70,7 +70,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/SearchBtnHome"
         app:layout_constraintStart_toStartOf="parent"
-        app:srcCompat="@drawable/ic_baseline_home_24"
+        app:srcCompat="@drawable/ic_baseline_add_24"
         android:background="@color/light_brown2"/>
 
     <TextView

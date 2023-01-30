@@ -14,6 +14,7 @@ class MainActivity : AppCompatActivity() {
         val watchedBtn=findViewById<Button>(R.id.WatchedBtn)
         val toWatchBtn=findViewById<Button>(R.id.ToWatchBtn)
         val searchBtn = findViewById<ImageButton>(R.id.SearchBtnHome)
+        val moreBtn = findViewById<ImageButton>(R.id.MoreBtnInHome)
 
 
         watchedBtn.setOnClickListener {
@@ -28,6 +29,11 @@ class MainActivity : AppCompatActivity() {
 
         searchBtn.setOnClickListener {
             val searchAct =Intent(this, SearchMovies::class.java)
+            startActivity(searchAct)
+        }
+
+        moreBtn.setOnClickListener {
+            val searchAct = Intent(this, Detailed::class.java)
             startActivity(searchAct)
         }
     }
