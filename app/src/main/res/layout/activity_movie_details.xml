@@ -32,8 +32,8 @@
 
     <TextView
         android:id="@+id/SynopsisText"
-        android:layout_width="400dp"
-        android:layout_height="456dp"
+        android:layout_width="384dp"
+        android:layout_height="154dp"
         android:layout_marginStart="10dp"
         android:layout_marginTop="32dp"
         android:layout_marginEnd="10dp"
@@ -87,5 +87,17 @@
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/ic_baseline_arrow_back_24"
         android:background="@color/light_brown2"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/RecyclerViewDetails"
+        android:layout_width="409dp"
+        android:layout_height="317dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginEnd="5dp"
+        android:layout_marginBottom="1dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/SynopsisText" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
