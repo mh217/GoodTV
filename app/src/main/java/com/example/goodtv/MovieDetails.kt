@@ -3,6 +3,7 @@ package com.example.goodtv
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.ImageButton
+import android.widget.Toast
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.bumptech.glide.Glide
 import com.example.goodtv.databinding.ActivityMovieDetailsBinding
@@ -92,19 +93,22 @@ class Movie_details : AppCompatActivity() {
                             }
                         }
 
-                        var namesearch1 = name.toString().replaceFirstChar { it.lowercase() }
-                        var namesearch2 = name.toString().replaceFirstChar { it.uppercase() }
+                        val namesearch1 = name.toString().replaceFirstChar { it.lowercase() }
+                        val namesearch2 = name.toString().replaceFirstChar { it.uppercase() }
+                        val namesearch3 = name.toString().uppercase()
+                        val namesearch4 = name.toString().lowercase()
                         val commentList2: ArrayList<Comment> = ArrayList()
                         for(data in commentList) {
-                            if(data.Comment?.contains(namesearch1) == true || data.Comment?.contains(namesearch2)== true){
+                            if(data.Comment?.contains(namesearch1) == true || data.Comment?.contains(namesearch2)== true || data.Comment?.contains(namesearch3)== true || data.Comment?.contains(namesearch4)== true){
                                 commentList2.add(data)
                             }
 
-                            commentAdapter = CommentAdapter(commentList2 as ArrayList<Comment>)
-                            binding.RecyclerViewDetails.apply {
-                                layoutManager = LinearLayoutManager(this@Movie_details)
-                                adapter=commentAdapter
-                            }
+                                commentAdapter = CommentAdapter(commentList2 as ArrayList<Comment>)
+                                binding.RecyclerViewDetails.apply {
+                                    layoutManager = LinearLayoutManager(this@Movie_details)
+                                    adapter=commentAdapter
+                                }
+
                         }
                     }
 

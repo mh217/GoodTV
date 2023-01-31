@@ -33,18 +33,19 @@
     <TextView
         android:id="@+id/SynopsisText"
         android:layout_width="384dp"
-        android:layout_height="154dp"
+        android:layout_height="wrap_content"
         android:layout_marginStart="10dp"
-        android:layout_marginTop="32dp"
+        android:layout_marginTop="200dp"
         android:layout_marginEnd="10dp"
         android:text="TextView"
         android:textAlignment="center"
         android:textSize="16sp"
         android:textStyle="italic"
+        app:layout_constraintBottom_toTopOf="@+id/RecyclerViewDetails"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.375"
+        app:layout_constraintHorizontal_bias="0.857"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/ToWatchedBBtn" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/RatingText"
@@ -90,8 +91,8 @@
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/RecyclerViewDetails"
-        android:layout_width="409dp"
-        android:layout_height="317dp"
+        android:layout_width="401dp"
+        android:layout_height="291dp"
         android:layout_marginStart="5dp"
         android:layout_marginEnd="5dp"
         android:layout_marginBottom="1dp"
