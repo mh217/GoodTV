@@ -9,6 +9,8 @@
     <string name="rating">Rating:</string>
     <string name="end">The end</string>
     <string name="back">Go back</string>
+    <string name="comment">Comment</string>
+    <string name="moreMoviesWarning">Thank you for your patience more movies coming soon!!</string>
     <string name="forendfrag">This is the end.</string>
     <string name="forend">Thank you for using my app. I wanted to develop app that help you track what movies you already watched and the ones that are still waiting for you. I hope you find it useful.</string>
 </resources>

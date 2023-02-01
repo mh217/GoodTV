@@ -1,5 +1,6 @@
 package com.example.goodtv
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.ImageButton
@@ -26,8 +27,15 @@ class Movie_details : AppCompatActivity() {
         val watchedBtn = binding.Watchedbbtn
         val toWatchMovies = binding.ToWatchedBBtn
         val recycler = binding.RecyclerViewDetails
+        val commentbtn = binding.CommentBtnToFrag
 
         movieId =intent.getStringExtra("movieID")!!
+
+        commentbtn.setOnClickListener {
+            val commentAct = Intent(this, CommentHelp::class.java)
+            commentAct.putExtra("movieidd", movieId)
+            startActivity(commentAct)
+        }
 
         loadMovieDetails()
 
@@ -71,6 +79,7 @@ class Movie_details : AppCompatActivity() {
                 val image = result.get("Poster")
                 val synopsis =result.get("Synopsis")
 
+
                 Glide
                     .with(this)
                     .load(image)
@@ -80,8 +89,9 @@ class Movie_details : AppCompatActivity() {
                 binding.RatingText.text=rating.toString()
                 binding.SynopsisText.text = synopsis.toString()
 
-
-                db.collection("Comments")
+                db.collection("Movies")
+                    .document(movieId)
+                    .collection("Comment")
                     .get()
                     .addOnSuccessListener { result2 ->
                         val commentList: ArrayList<Comment> = ArrayList()
@@ -93,17 +103,7 @@ class Movie_details : AppCompatActivity() {
                             }
                         }
 
-                        val namesearch1 = name.toString().replaceFirstChar { it.lowercase() }
-                        val namesearch2 = name.toString().replaceFirstChar { it.uppercase() }
-                        val namesearch3 = name.toString().uppercase()
-                        val namesearch4 = name.toString().lowercase()
-                        val commentList2: ArrayList<Comment> = ArrayList()
-                        for(data in commentList) {
-                            if(data.Comment?.contains(namesearch1) == true || data.Comment?.contains(namesearch2)== true || data.Comment?.contains(namesearch3)== true || data.Comment?.contains(namesearch4)== true){
-                                commentList2.add(data)
-                            }
-
-                                commentAdapter = CommentAdapter(commentList2 as ArrayList<Comment>)
+                                commentAdapter = CommentAdapter(commentList as ArrayList<Comment>)
                                 binding.RecyclerViewDetails.apply {
                                     layoutManager = LinearLayoutManager(this@Movie_details)
                                     adapter=commentAdapter
@@ -123,4 +123,4 @@ class Movie_details : AppCompatActivity() {
 
 
 
-}
+

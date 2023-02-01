@@ -13,12 +13,17 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.google.firebase.firestore.FirebaseFirestore
 import com.google.firebase.firestore.ktx.firestore
+import com.google.firebase.firestore.ktx.toObject
 import com.google.firebase.ktx.Firebase
+
+
 
 class Comments : Fragment() {
 
     private val db = Firebase.firestore
     private lateinit var commentAdapter: CommentAdapter
+
+
 
 
     override fun onCreateView(
@@ -35,6 +40,7 @@ class Comments : Fragment() {
         val comment = view.findViewById<ImageButton>(R.id.CommentBtn)
 
 
+        val movieId = arguments?.getString("Id").toString()
         back.setOnClickListener {
             val backTo = Intent(context,SearchMovies::class.java)
             startActivity(backTo)
@@ -45,7 +51,7 @@ class Comments : Fragment() {
         comment.setOnClickListener {
             val name=inputName.text.toString()
             val commente=inputComment.text.toString()
-            val ref = FirebaseFirestore.getInstance().collection("Comments")
+            val ref = FirebaseFirestore.getInstance().collection("Movies").document(movieId).collection("Comment")
             if(name.trim().isNotEmpty()){
                 ref.add(mapOf(
                     "Name" to name,
@@ -58,8 +64,13 @@ class Comments : Fragment() {
                     "Name" to "Anonymous",
                     "Comment" to commente
                 ))
+
+                inputName.text.clear()
+                inputComment.text.clear()
             }
-            db.collection("Comments")
+            db.collection("Movies")
+                .document(movieId)
+                .collection("Comment")
                 .get()
                 .addOnSuccessListener { result ->
                     val commentsArrayList: ArrayList<Comment> = ArrayList()
@@ -88,7 +99,9 @@ class Comments : Fragment() {
 
 
 
-        db.collection("Comments")
+        db.collection("Movies")
+            .document(movieId)
+            .collection("Comment")
             .get()
             .addOnSuccessListener { result ->
                 val commentsArrayList: ArrayList<Comment> = ArrayList()

@@ -16,6 +16,13 @@
         android:theme="@style/Theme.GoodTV"
         tools:targetApi="31">
         <activity
+            android:name=".ForendActivity"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
             android:name=".CommentHelp"
             android:exported="false">
             <meta-data
