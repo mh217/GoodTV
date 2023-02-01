@@ -9,6 +9,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.EditText
 import android.widget.ImageButton
+import android.widget.Toast
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.google.firebase.firestore.FirebaseFirestore
@@ -59,15 +60,23 @@ class Comments : Fragment() {
                 ))
 
             }
-            else {
+
+            if(name.trim().isEmpty() && commente.trim().isNotEmpty()){
                 ref.add(mapOf(
                     "Name" to "Anonymous",
                     "Comment" to commente
                 ))
 
+
                 inputName.text.clear()
                 inputComment.text.clear()
             }
+
+            if(name.trim().isEmpty() && commente.trim().isEmpty()) {
+                Toast.makeText(context,"Enter a comment", Toast.LENGTH_LONG).show()
+            }
+
+
             db.collection("Movies")
                 .document(movieId)
                 .collection("Comment")
