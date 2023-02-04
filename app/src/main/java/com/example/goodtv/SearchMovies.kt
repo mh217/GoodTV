@@ -88,12 +88,7 @@ class SearchMovies : AppCompatActivity(){
 
                         }
                         else{
-                            val sortedList: ArrayList<Movie> =
-                                ArrayList(movieArrayList.sortedWith(compareBy {
-                                    it.Name
-                                }))
-
-                            movieAdapter = MovieAdapter(sortedList as ArrayList<Movie>)
+                            movieAdapter = MovieAdapter(movieArrayList)
                             movieRecyclerView.apply {
                                 layoutManager = LinearLayoutManager(this@SearchMovies)
                                 adapter = movieAdapter
