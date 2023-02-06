@@ -59,6 +59,8 @@ class Comments : Fragment() {
                     "Comment" to commente
                 ))
 
+                inputName.text.clear()
+                inputComment.text.clear()
             }
 
             if(name.trim().isEmpty() && commente.trim().isNotEmpty()){
