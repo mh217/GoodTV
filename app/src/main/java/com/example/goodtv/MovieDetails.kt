@@ -70,8 +70,8 @@ class Movie_details : AppCompatActivity() {
 
 
     private fun loadMovieDetails() {
-        val ref = FirebaseFirestore.getInstance().collection("Movies")
-        ref.document(movieId)
+        db.collection("Movies")
+            .document(movieId)
             .get()
             .addOnSuccessListener { result->
                 val name = result.get("Name")
