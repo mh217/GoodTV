@@ -47,17 +47,17 @@ class Movie_details : AppCompatActivity() {
 
 
         watchedBtn.setOnClickListener {
-                val ref = FirebaseFirestore.getInstance().collection("Movies")
-                ref.document(movieId)
-                    .update(mapOf(
+            db.collection("Movies")
+                .document(movieId)
+                .update(mapOf(
                         "Watched" to true,
                         "ToWatch" to false
                     ))
             }
 
         toWatchMovies.setOnClickListener {
-            val ref = FirebaseFirestore.getInstance().collection("Movies")
-            ref.document(movieId)
+            db.collection("Movies")
+                .document(movieId)
                 .update(mapOf(
                     "Watched" to false,
                     "ToWatch" to true
