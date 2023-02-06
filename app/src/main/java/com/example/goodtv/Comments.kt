@@ -52,7 +52,7 @@ class Comments : Fragment() {
         comment.setOnClickListener {
             val name=inputName.text.toString()
             val commente=inputComment.text.toString()
-            val ref = FirebaseFirestore.getInstance().collection("Movies").document(movieId).collection("Comment")
+            val ref = db.collection("Movies").document(movieId).collection("Comment")
             if(name.trim().isNotEmpty()){
                 ref.add(mapOf(
                     "Name" to name,
