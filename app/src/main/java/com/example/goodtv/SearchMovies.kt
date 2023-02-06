@@ -63,7 +63,7 @@ class SearchMovies : AppCompatActivity(){
                     }
 
                     searchButton.setOnClickListener() {
-                        val sortedList2: ArrayList<Movie> = ArrayList()
+                        val sortedList: ArrayList<Movie> = ArrayList()
                         val searchEdit = findViewById<EditText>(R.id.SearchEditText)
                         val search2=searchEdit.text.toString().replaceFirstChar { it.lowercase() }
                         val search3=searchEdit.text.toString().replaceFirstChar { it.uppercase() }
@@ -72,14 +72,14 @@ class SearchMovies : AppCompatActivity(){
                             searchEdit
                             for (data in movieArrayList) {
                                 if (data.Name?.contains(search3) == true || data.Name?.contains(search2)== true)
-                                    sortedList2.add(data)
+                                    sortedList.add(data)
                             }
-                            if(sortedList2.isEmpty()){
+                            if(sortedList.isEmpty()){
 
                                 Toast.makeText(this,"Movie not found",Toast.LENGTH_LONG).show()
                             }
                             else{
-                                movieAdapter = MovieAdapter(sortedList2 as ArrayList<Movie>)
+                                movieAdapter = MovieAdapter(sortedList as ArrayList<Movie>)
                                 movieRecyclerView.apply {
                                     layoutManager = LinearLayoutManager(this@SearchMovies)
                                     adapter = movieAdapter
