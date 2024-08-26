@@ -1,4 +1,4 @@
-# GoodTVi
+# GoodTV
 
 Android aplikacija pisana programskim jezikom kotlin za pretragu i praćenje pogledanih filmova. 
 
